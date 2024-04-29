@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.card h2 {
+  flex-grow: 1;
+  margin-top: 0;
+}
+
+.card p {
+  /* flex-grow: 1; */
+  margin-bottom: 0;
+}

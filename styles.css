@@ -25,22 +25,35 @@ button {
 
 /**************************/
 .cardContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+}  
+
+.one {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: stretch;
-  /* flex: 1; */
-  max-width: 1440px;
-}  /* flex container  */
+  justify-content: space-between;
+  /* align-items: stretch; */
+} /* flex container  */
+.two {
+  display: grid;
+} /* grid container  */
+
+@media (min-width: 30em) {
+  .two {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  } /* grid container  */
+}
 
 .card {
-  width: fit-content;
+  /* width: fit-content; */
   max-width: 300px;
   height: auto;
   background-color: aliceblue;
   border-radius: 20px;
-} /* flex childern */
+} /* flex or grid childern */
 
 .cardImg img {
   border-radius: 20px 20px 0px 0px;
@@ -50,10 +63,11 @@ button {
 .cardBodyContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0.75rem;
 }
 .cardTitle {
+  max-height: max-content;
   margin-bottom: 0.5rem;
 }
 .cardCopy {
